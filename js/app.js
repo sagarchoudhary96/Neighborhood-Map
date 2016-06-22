@@ -89,7 +89,7 @@ var viewModel = function() {
 
   var self = this;
 
-  self.errorDisplay = ko.observable("");
+  self.errorDisplay = ko.observable('');
 
   // populate mapList with each Model
   self.mapList = [];
@@ -102,7 +102,7 @@ var viewModel = function() {
       selected: ko.observable(marker.selected),
       venueid: marker.venueid,   // foursquare venue id
       animation: google.maps.Animation.DROP
-    }))
+    }));
   });
 
   //store mapList length
@@ -115,7 +115,7 @@ var viewModel = function() {
   self.makeBounce = function(marker){
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(function(){ marker.setAnimation(null);}, 700);
-  }
+  };
 
   // function to add API information to each marker
   self.addApiInfo = function(passedMapMarker){
@@ -147,11 +147,11 @@ var viewModel = function() {
 				//set this mapMarker to the "selected" state
 				self.setSelected(passedMapMarker);
 			});
-		})(self.mapList[i])
+		})(self.mapList[i]);
   }
 
   // create a filter observable for filter text
-  self.filterText = ko.observable("");
+  self.filterText = ko.observable('');
 
 
   // calls every keydown from input box
@@ -211,9 +211,9 @@ var viewModel = function() {
         	} else {
         		return "Location is rated " + self.currentMapItem.rating;
         	}
-        }
+        };
 
-        var formattedInfoWindow = "<h5>" + self.currentMapItem.name + "</h5>" + "<div>" + formattedLikes() + "</div>" + "<div>" + formattedRating() + "</div>"
+        var formattedInfoWindow = "<h5>" + self.currentMapItem.name + "</h5>" + "<div>" + formattedLikes() + "</div>" + "<div>" + formattedRating() + "</div>";
 
 		infowindow.setContent(formattedInfoWindow);
 
