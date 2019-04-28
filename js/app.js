@@ -120,7 +120,7 @@ var viewModel = function() {
   // function to add API information to each marker
   self.addApiInfo = function(passedMapMarker){
       $.ajax({
-        url: "https://api.foursquare.com/v2/venues/" + passedMapMarker.venueid + '?client_id=CGOJQ1C3N5GARA4Q53TWRBUWARWXRPEXEG1KM1CCVFDWO2VA&client_secret=OQXLE0UEJOKJLGOM0AT5NA5JE10AXSFNS3GT1PKJGCQ3JJM2&v=20160614',
+        url: "https://api.foursquare.com/v2/venues/" + passedMapMarker.venueid + '?client_id=TCR0FZG1JBYEQS3HMUBAPKRU4FL3ZJDBFALWXWJ5DNTMJ1VL&client_secret=UALWAYPDCAVFX3EG2KY13F3XMU0A1P012LIC4CB1EXKMDL4V&v=20190428',
         dataType: "json",
         success: function(data){
           // stores results to display likes and ratings
